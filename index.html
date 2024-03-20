@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./dest/app.js" defer></script>
+</head>
+<body>
+    <h1>Contact Manger App</h1>
+    <div class="fields-container">
+        <div id="field-1">
+        <div class="input-field name">
+            <label>
+                Name:
+                <input type="text" placeholder="Name*">
+            </label>
+        </div>
+        <div class="input-field email">
+            <label>
+                Email-id:
+                <input type="text" placeholder="Email Address">
+            </label>
+        </div>
+        <div class="input-field phone">
+            <label>
+                Phone:
+                <input type="text" placeholder="Phone Number*"  maxlength="10">
+            </label>
+        </div>
+        <div class="input-field landline">
+            <label>
+                Landline Number:
+                <input type="text" placeholder="Ex:044-454-6466"  maxlength="12">
+            </label>
+        </div>
+		<div class="input-field Category">
+            <label>
+                Category:
+                <select name="category" id="category">
+					<option value="Friends">Friends</option>
+					<option value="Family">Family</option>
+					<option value="Work">Work</option>
+					<option value="Others" selected>Others</option>
+				  </select>
+            </label>
+        </div>
+        </div>
+    </div>
+    <div class="addbtn">
+        <button type="button" class="add-cont">Add Contact</button>
+
+    </div>
+    <br><br>
+    <div class="search-bar">
+        <h4>SEARCH CONTACT  :</h4>
+        <input type="text" id="searchInput" placeholder="Search by name or number">
+    </div>
+	<h4 id="Category-h4">Filter By Category</h4>
+    <div id="category">
+        <div>
+            <input type="radio" id="all" name="category" class="category-radio" value="all" checked>
+        <label for="all">All</label>
+
+        </div>
+        <div>
+            <input type="radio" id="Work" name="category" value="Work" class="category-radio">
+        <label for="Work">Work</label><br>
+
+        </div>
+        <div><input type="radio" id="Family" name="category" value="Family" class="category-radio">
+            <label for="Family">Family</label><br></div>
+        <div>
+            <input type="radio" id="Friends" name="category" value="Friends" class="category-radio">
+            <label for="Friends">Friends</label><br>
+
+        </div>
+       <div><input type="radio" id="Others" name="category" value="Others" class="category-radio">
+        <label for="Others">Others</label></div>
+        
+    </div>
+    
+    <div class="pop-up-box">
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="popup-close" class="close">&times;</span>
+            <h2>Edit Contact Details</h2>
+            <div class="popup-details">
+                <div class="input-field name">
+                    <label for="popup-name">Name:</label>
+                    <input type="text" id="popup-name" placeholder="Name">
+                </div>
+                <div class="input-field email">
+                    <label for="popup-email">Email:</label>
+                    <input type="email" id="popup-email" placeholder="Email Address">
+                </div>
+                <div class="input-field phone">
+                    <label for="popup-phone">Phone:</label>
+                    <input type="tel" id="popup-phone" placeholder="Phone Number" maxlength="10">
+                </div>
+                <div class="input-field landline">
+                    <label for="popup-landline">Landline:</label>
+                    <input type="tel" id="popup-landline" placeholder="Ex:044-454-6466" maxlength="12">
+                </div>
+                <div class="input-field Category">
+                    <label for="popup-category">Category:</label>
+                    <select id="popup-category">
+                        <option value="Friends">Friends</option>
+                        <option value="Family">Family</option>
+                        <option value="Work">Work</option>
+                        <option value="Others" selected>Others</option>
+                    </select>
+                </div>
+            </div>
+            <div class="savebtn"><button id="popup-save">Save</button></div>
+            
+        </div>
+    </div>
+    </div>  
+    <!-- <div class="pop-blur"></div> -->
+	
+    <div class="contact-indx"></div>
+</body>
+</html>
